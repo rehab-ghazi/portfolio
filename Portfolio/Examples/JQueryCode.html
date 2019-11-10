@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset ="utf-8">
+ <title>
+changeHTMLelement
+ </title>
+ <style>
+ .bluebox{
+ background-color: #3A5795;
+ color: white;
+ height: 100px;
+ width:auto;
+ }
+ .yellowbox{
+ background-color: rgb(222, 224, 85);
+ height: 100px;
+ width: auto;
+ }
+ .greenbox{
+ background-color: #31af37;
+ height: auto;
+ width: auto;
+ }
+ .great{
+ background-color: #5a3479;
+
+ }
+ </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ </head>
+
+ <body>
+<p>Enter your name:<input></p>
+<button id="changeFacebook"> change facebook text</button>
+<button id="changeApple"> change Apple html</button>
+<button id="changeinput"> change input value</button>
+<button id="changeMicrosoft"> change microsoft link</button>
+<button id="addText"> Add text</button>
+ <div class="bluebox" id="facebook">
+ <p>
+ Facebook is
+ <span class="great">
+ great
+ </span>
+ .
+ </p>
+
+ </div>
+ <div class="yellowbox" id="apple">
+ <p>
+ Apple.
+ </p>
+
+ </div>
+ <div class="greenbox" id="microsoft">
+ <p id="microsoftparagraph">
+ Microsoft.
+ </p>
+<P><a href="https://www.microsoft.com" title="microsoftLink" id="microsoft"> Microsoft Link</a></P>
+ </div>
+
+ </body>
+<script>
+    $(function(){
+        $("#changeFacebook").click(function(){
+            $("#facebook").text("this is facebook");
+        });
+        $("#changeApple").click(function(){
+            $("#apple").html("<p>this is apple</p> <p>New IOS Available</p>");
+        });$("#changeinput").click(function(){
+            $("input").val("sam");
+        });
+        $("#changeMicrosoft").click(function(){
+            $("#microsoft").attr({"href":"https://www.google.com" , "title":"google" ,});
+        });
+        $("#addText").click(function(){
+          /*  $("#microsoft").append("<ul><li>BMW</li><li>Audi</li><li>Mercedes</li></ul>");
+        }); 
+        $("#addText").click(function(){
+            $("#microsoft").prepend("<ul><li>BMW</li><li>Audi</li><li>Mercedes</li></ul>");
+        });*/
+        
+            $("#microsoftparagraph").after("<p>New paragraph</p>");
+        });
+        
+    });
+</script>
+
+</html>
